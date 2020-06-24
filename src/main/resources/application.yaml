@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        CustomerChannel:
+          destination: UserChannel
+          group: UserChannelGroup
+  rabbitmq:
+    addresses: ${env_rabbitmq_addresses}
+    username: ${env_rabbitmq_username}
+    password: ${env_rabbitmq_password}
+
+
